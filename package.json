@@ -1,0 +1,35 @@
+{
+  "name": "express-snake-to-camel-case-converter",
+  "version": "1.0.0",
+  "description": "Converter that changes the request.body from snake to camel case",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/simonpalmqvist/express-snake-to-camel-case-converter.git"
+  },
+  "keywords": [
+    "express",
+    "snake-case",
+    "to",
+    "camel-case"
+  ],
+  "author": "simonpalmqvist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonpalmqvist/express-snake-to-camel-case-converter/issues"
+  },
+  "homepage": "https://github.com/simonpalmqvist/express-snake-to-camel-case-converter#readme",
+  "devDependencies": {
+    "body-parser": "^1.16.1",
+    "chai": "^3.5.0",
+    "express": "^4.14.1",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  }
+}
