@@ -1,6 +1,6 @@
 {
   "name": "express-snake-to-camel-case-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converter that changes the request.body from snake to camel case",
   "main": "app.js",
   "directories": {
