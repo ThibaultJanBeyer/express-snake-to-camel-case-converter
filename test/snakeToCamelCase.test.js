@@ -28,6 +28,26 @@ describe('snakeToCamelCase', function () {
     expect(requestMock.body).to.deep.equal(expected)
   })
 
+  it('Should handle arrays', function () {
+    expected = {
+      array: [
+        {fooA: 'bar'},
+        {fooB: 'bar'}
+      ]
+    }
+
+    requestMock.body = {
+      array: [
+        {foo_a: 'bar'},
+        {foo_b: 'bar'}
+      ]
+    }
+
+    snakeToCamelCase(requestMock, {}, nextSpy)
+
+    expect(requestMock.body).to.deep.equal(expected)
+  })
+
   it('Should change snake_case deep keys in object to camelCase', function () {
     expected = {deepChange: 'yes'}
 
@@ -41,6 +61,18 @@ describe('snakeToCamelCase', function () {
     snakeToCamelCase(requestMock, {}, nextSpy)
 
     expect(requestMock.body.thisWill).to.deep.equal(expected)
+  })
+
+  it('Should not convert nulls', function () {
+    expected = {
+      nullValue: null,
+    }
+
+    requestMock.body = expected
+
+    snakeToCamelCase(requestMock, {}, nextSpy)
+
+    expect(requestMock.body).to.deep.equal(expected)
   })
 
   it('Should call next function when done', function () {
