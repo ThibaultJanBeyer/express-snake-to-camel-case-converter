@@ -31,5 +31,8 @@
     "express": "^4.14.1",
     "mocha": "^3.2.0",
     "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "map-obj": "^3.0.0"
   }
 }
